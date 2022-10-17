@@ -1,0 +1,46 @@
+﻿<Window x:Class="Inspiring_Quotes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Inspiring_Quotes"
+        mc:Ignorable="d"
+        Title="Inspiring Quotes" Height="800" Width="650"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize"
+        Loaded="Window_Loaded">
+
+    <Canvas>
+        <Image Name="image" Height="800" Width="650" Stretch="UniformToFill" Canvas.Left="0"/>
+
+        <TextBlock Name="quote" Width="466" TextAlignment="Center" Foreground="White" Canvas.Left="92" Canvas.Top="158"
+                   HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" TextWrapping="Wrap"
+                   FontFamily="Cascadia Mono SemiBold" FontStretch="Medium" Padding="8,12,8,12" Margin="0,4,0,0">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.5">
+                    <GradientStop Color="#FF6AE7FF"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+
+        <TextBlock Name="author" Width="300" Canvas.Left="258" Canvas.Top="257" Foreground="White" 
+                   FontSize="20" FontFamily="Cascadia Mono Light" HorizontalAlignment="Right" VerticalAlignment="Bottom" 
+                   FontStyle="Italic" TextAlignment="Right"/>
+
+        <Button Background="{x:Null}" Canvas.Left="290" Canvas.Top="583" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                Click="nextBtn_Click" Cursor="Hand" Foreground="{x:Null}" BorderBrush="{x:Null}" Width="70" Height="70">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Image Source="/images/next.png" Height="60" Width="86" RenderTransformOrigin="0.544,1.142" Cursor="Hand" 
+                       HorizontalAlignment="Left" Canvas.Left="330.333" Canvas.Top="588" VerticalAlignment="Top" 
+                       />
+        <Path Data="M173.33333,596.70667 C173.33333,596.70667 258.50033,651.20633 258.50033,651.20633 272.69517,683.7407 332.14508,677.13467 332.14508,677.13467 L414.88068,672.25382 430.35202,653.81958 449.85377,622.87638 274.32518,597.85848 z" Fill="#FFF4F4F5" Height="83" Canvas.Left="154.666" Stroke="Black" Stretch="Fill" Canvas.Top="627.333" Width="278" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+    </Canvas>
+
+</Window>
